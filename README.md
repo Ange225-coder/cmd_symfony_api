@@ -17,6 +17,18 @@ Installation des fixtures
 composer require orm-fixtures --dev
 ```
 
+Installation du serializer
+```
+composer require symfony/serializer-pack
+```
+
+Installation du package pour gérer la validation des champs requis lors d'une requête avec POST
+```
+composer require symfony/validator doctrine/annotations
+```
+
+
+
 
 
 
@@ -45,4 +57,14 @@ Lancer une fixture
 ```
 php bin/console doctrine:fixtures:load
 php bin/console doctrine:fixtures:load --group={{fixture_group}} --append
+```
+
+Génération d'un controller
+```
+php bin/console make:controller
+```
+
+Génération d'un evenement pour éviter que les erreurs s'affichent en HTML mais plutot en JSON
+```
+php bin/console make:subscriber
 ```
