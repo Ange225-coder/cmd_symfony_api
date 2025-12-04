@@ -22,9 +22,19 @@ Installation du serializer
 composer require symfony/serializer-pack
 ```
 
-Installation du package pour gérer la validation des champs requis lors d'une requête avec POST
+Installation du package pour gérer la validation des champs requis lors d'une requête avec POST et PUT
 ```
 composer require symfony/validator doctrine/annotations
+```
+
+Installation de lexikJWT
+```
+composer require lexik/jwt-authentication-bundle
+```
+
+Installation de Hateoas et JMSSerializer
+```
+composer require willdurand/hateoas-bundle
 ```
 
 
@@ -67,4 +77,10 @@ php bin/console make:controller
 Génération d'un evenement pour éviter que les erreurs s'affichent en HTML mais plutot en JSON
 ```
 php bin/console make:subscriber
+```
+
+Génération de clé public et privé (JWT)
+```
+openssl genpkey -out config/jwt/private.pem -aes256 -algorithm rsa -pkeyopt rsa_keygen_bits:4096
+openssl pkey -in config/jwt/private.pem -out config/jwt/public.pem -pubout
 ```
