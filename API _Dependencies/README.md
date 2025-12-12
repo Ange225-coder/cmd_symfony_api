@@ -37,6 +37,16 @@ Installation de Hateoas et JMSSerializer
 composer require willdurand/hateoas-bundle
 ```
 
+Installation de Nelmio pour la documentation
+```
+composer require nelmio/api-doc-bundle
+```
+
+Installation du client HTTP pour interroger une API externe
+```
+composer require symfony/http-client
+```
+
 
 
 
