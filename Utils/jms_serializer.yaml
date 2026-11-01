@@ -1,0 +1,14 @@
+# dans config/packages/jms_serializer.yaml, ajouter la ligne property_naming lors de l'installation de JSM Serializer
+# Elle doit être au même niveau que visitor
+
+jms_serializer:
+    visitors:
+        xml_serialization:
+            format_output: '%kernel.debug%'
+    property_naming:
+        id: jms_serializer.identical_property_naming_strategy
+
+
+# Le reste de la configuration
+
+
